@@ -1,0 +1,171 @@
+.wrapper
+  .side-data
+    .side-data__info
+      .side-data__info--date
+        = @skill.set_date
+      .side-data__info__edit
+        = form_with(url: skills_searches_path, method: :get, local: true) do |f|
+          = f.collection_select :date, Skill.where(user_id: current_user.id).order("id DESC"), :date, 'set_date', {prompt: "他のデータを見る"}, {class: "side-data__info__edit--date"}
+          = f.submit "変更"
+          = link_to "トップに戻る", root_path, class: "side-data__info__edit--top"
+    .side-data__graph
+      .side-data__graph--sum
+        = "計 #{@skill.sum_skill} 点"
+      %canvas#myChart{style: "width: 100%; height: 100%;"}
+      -# %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"}
+      :javascript
+        draw_graph();
+    .side-data__comment
+      - if @comments
+        - @comments.each do |comment|
+          .side-data__comment__box
+            .side-data__comment__box--main
+              = comment.text
+            .side-data__comment__box__info
+              .side-data__comment__info--name
+                = comment.user.name
+              .side-data__comment__info--date
+                = comment.created_at.to_s(:datetime_jp)
+    .side-data__form
+      = form_with(model: [@skill, @comment], local: true, id: "new-message") do |f|
+        = f.text_area :text, placeholder: "コメントを入力してください", wrap: "hard", size: "30 x 4", class: "side-data__form--message"
+        = f.submit "送信", class: "side-data__form--btn"
+  .main-data
+    %table.main-data__table{border: 3}
+      %tr.list
+        %th.skill-name
+          スキル
+        %th.score-name
+          スコア
+        %th.standard-name
+          評価基準
+      %tr.list
+        %td.skill
+          品出し
+        %td.score
+          = @skill.stock
+        %td.standard
+          = "１：品出しする商品を対象の場所に品出しすることができる"
+          %br
+          = "２：先入れ先出しを意識して品出しすることができる"
+          %br
+          = "３：品出しのRE基準を理解し、安全かつスピードを持って品出しができる"
+          %br
+          = "４：他箇所展開を意識し、陳列量が少ない場合は他箇所展開場所にも品出しをすることができる"
+      %tr.list
+        %td.skill
+          前出し
+        %td.score
+          = @skill.front
+        %td.standard
+          = "１：商品の前出しをすることができる"
+          %br
+          = "２：手前側だけでなく、棚の奥から全体的に前出しができる"
+          %br
+          = "３：商品のフェースアップを意識して前出しができる"
+          %br
+          = "４：品出しの際に棚全体の商品の前出しを意識して実行している"
+      %tr.list
+        %td.skill
+          接客
+        %td.score
+          = @skill.service
+        %td.standard
+          = "１：お客さまの問い合わせに接客用語を用いて接客している"
+          %br
+          = "２：商品の場所を尋ねられた場合、その場所まで案内できる"
+          %br
+          = "３：お客さまに商品の特徴を説明できる"
+          %br
+          = "４：お求めの商品が欠品だった場合、お客さまに代替案を提示できる"
+      %tr.list
+        %td.skill
+          発注
+        %td.score
+          = @skill.order
+        %td.standard
+          = "１：グロサリー（非冷蔵商品）の発注ができる"
+          %br
+          = "２：日配（冷蔵商品）の発注ができる"
+          %br
+          = "３：在庫を把握し、ポイントデーや天候の与件を考慮して発注ができる"
+          %br
+          = "４：発注のRE基準を理解し、発注時間の短縮に努めている"
+      %tr.list
+        %td.skill
+          値引き・廃棄
+        %td.score
+          = @skill.loss
+        %td.standard
+          = "１：商品の値引き・廃棄をすることができる（機器を扱うことができる）"
+          %br
+          = "２：商品別の値引き・廃棄基準を理解し、対象商品を下げることができる"
+          %br
+          = "３：値引き・廃棄のRE基準を理解し、時間短縮に努めている"
+          %br
+          = "４：自店のロス率、ロス金額を理解し、削減に努めている"
+      %tr.list
+        %td.skill
+          ＰＯＰ作成
+        %td.score
+          = @skill.pop
+        %td.standard
+          = "１：最低限、①商品名 ②規格 ③価格、が入ったＰＯＰを作成することができる"
+          %br
+          = "２：定番やセールなど、その時の企画によってＰＯＰを変更することができる"
+          %br
+          = "３：ＰＯＰ作成のRE基準を理解し、作成時間の短縮に努めている"
+          %br
+          = "４：ＰＯＰに商品の特徴やキャッチフレーズなどを入れ、販売促進に努めている"
+      %tr.list
+        %td.skill
+          クリンリネス
+        %td.score
+          = @skill.clean
+        %td.standard
+          = "１：ダスターを常備し、いつでもクリンリネスが出来るよう心がけている"
+          %br
+          = "２：クリンリネス用具の使い方を理解し、クリンリネスが出来る"
+          %br
+          = "３：品出しや前出しの際に、棚やケースのクリンリネスを心がけている"
+          %br
+          = "４：クリンリネスの必要箇所を理解し、適切なタイミングでクリンリネスを実施している"
+      %tr.list
+        %td.skill
+          数値分析
+        %td.score
+          = @skill.analysis
+        %td.standard
+          = "１：日報を出勤時確認できている"
+          %br
+          = "２：ＰＣで売上などの数値を調べることができる"
+          %br
+          = "３：売上だけでなく、差益、客数、ロスなどの推移も把握しようと意識している"
+          %br
+          = "４：数値をもとに課題を見つけ出し、改善に取り組んでいる"
+      %tr.list
+        %td.skill
+          情報収集
+        %td.score
+          = @skill.info
+        %td.standard
+          = "１：メディアの情報に意識を傾けている"
+          %br
+          = "２：自ら得た情報をスタッフや店舗メンバーに共有している"
+          %br
+          = "３：競合店のチラシを確認したり直接足を運んで調査・比較している"
+          %br
+          = "４：情報収集を活かし、自分なりのアイデアを活かしている"
+      %tr.list
+        %td.skill
+          試食販売
+        %td.score
+          = @skill.sale
+        %td.standard
+          = "１：店頭に出て試食販売ができる"
+          %br
+          = "２：しっかり声を出して試食販売をアピールしている"
+          %br
+          = "３：試食販売商品のオススメポイントをお客さまに説明できる"
+          %br
+          = "４：お客さまに買ってもらうにはどうしたらいいか、自分なりに工夫し実践している"

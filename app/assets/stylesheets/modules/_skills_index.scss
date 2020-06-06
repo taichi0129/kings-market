@@ -1,0 +1,35 @@
+.standard-data {
+  width: 85%;
+  height: 85vh;
+  overflow: scroll;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #FFFAFA;
+  &__comment {
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
+  &__list-name {
+    font-size: 20px;
+  }
+  &__table {
+    background-color: white;
+    height: 130px;
+    text-align: center;
+    margin-bottom: 20px;
+    .list {
+      .list-name {
+        font-size: 20px;
+      }
+      .level {
+        text-align: center;
+        height: 40px;
+        width: 25%;
+      }
+      .detail {
+        text-align: left;
+        padding: 5px 5px;
+      }
+    }
+  }
+}

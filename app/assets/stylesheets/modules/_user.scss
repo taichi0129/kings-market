@@ -1,0 +1,64 @@
+.side-menu {
+  width: 40%;
+  // background-color: #FFFAFA;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url('kings2.png');
+  background-color:rgba(255,255,255,0.7);
+  background-blend-mode:lighten;
+  background-size: 33%;
+  width: 40%;
+  padding: 10px;
+  &__start,
+  &__check,
+  &__standard {
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #DDFFFF;
+    transition: 0.2s;
+  }
+  &__start:active,
+  &__check:active,
+  &__standard:active {
+    transform: translateY(3px);
+  }
+  &__start:hover,
+  &__check:hover,
+  &__standard:hover {
+    background-color: #FFFF99;
+    font-size: 30px;
+    border-radius: 15px;
+  }
+  // &__check {
+  //   text-decoration: none;
+  //   border: 2px solid;
+  //   border-radius: 15px;
+  //   padding: 15px;
+  //   background-color: #DDFFFF;
+  // }
+  // &__standard {
+  //   text-decoration: none;
+  //   border: 2px solid;
+  //   border-radius: 15px;
+  //   padding: 15px;
+  //   background-color: #DDFFFF;
+  // }
+}
+
+.side-menu-image {
+  
+}
+
+.latest-data {
+  background-image: url('SM01.jpg');
+  background-color:rgba(255,255,255,0.9);
+  background-blend-mode:lighten;
+  background-size: cover;
+  width: 60%;
+  padding: 10px;
+}

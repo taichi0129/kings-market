@@ -1,0 +1,51 @@
+.devise {
+  margin: 30px auto;
+  width: 30%;
+  height: 60vh;
+  padding-top: 20px;
+  padding: 20px 40px;
+  border: 1px solid;
+  background-color: #FFFAFA;
+  box-shadow: 0.5px 2px 2px 5px #EEEEEE;
+  background-blend-mode:lighten;
+  background-color:rgba(255,255,255,0.8);
+}
+
+.devise-title {
+  font-size: 24px;
+}
+.new-user {
+  height: 60%;
+}
+.field {
+  font-size: 18px;
+  padding-top: 15px;
+}
+.text-field {
+  height: 50px;
+  width: 100%;
+  margin-top: 2px;
+  padding-left: 10px;
+}
+
+.devise-btn {
+  // display: block;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border: 1px solid;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: 2px 2px 4px #666666;
+  transition: 0.2s;
+  font-size: 20px;
+}
+.devise-btn:active {
+  transform: translateY(1px);
+}
+.devise-btn:hover {
+  background-color: #FFFF99;
+  font-size: 20px;
+  border-radius: 15px;
+}

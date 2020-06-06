@@ -1,0 +1,2 @@
+module Skills::SearchesHelper
+end

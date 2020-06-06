@@ -1,0 +1,14 @@
+.wrapper
+  .skill-data
+    - if current_user.admin?
+      .skill-data__title
+        = "全員の過去のスキルチェック表"
+      - @skills.each do |skill|
+        .skill-list
+          = link_to "合計 #{skill.sum_skill} 点｜#{skill.user.name}：#{skill.set_date}", skill_path(skill.id), class: "skill-list__date"
+    - else
+      .skill-data__title
+        = "#{@user.name} さんの過去のスキルチェック表"
+      - @skills.each do |skill|
+        .skill-list
+          = link_to "合計 #{skill.sum_skill} 点｜#{skill.set_date} のスキルチェック", skill_path(skill.id), class: "skill-list__date"

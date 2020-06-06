@@ -1,0 +1,10 @@
+.wrapper
+  - if user_signed_in?
+    .side-menu
+      = link_to "現状のスキルチェックをする", new_skill_path, class: "side-menu__start"
+      = link_to "過去のスキルチェック表を確認する", user_path(current_user), class: "side-menu__check"
+      = link_to "スキル別の評価基準を確認する", skills_path, class: "side-menu__standard"
+    .latest-data
+  - else
+    .side-menu-image
+    .latest-data

@@ -1,0 +1,431 @@
+.wrapper
+  .skill-check
+    .skill-check__title
+      現状のスキルチェックを行います
+    .skill-check__field
+      = form_for @skill do |f|
+        .skill-check__field--date
+          = f.label :date, "スキルチェック日"
+          = f.date_field :date
+        .skill-check__field--name 
+          = "<品出し>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :stock, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :stock, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :stock, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :stock, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :stock, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :stock, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :stock, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :stock, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :stock, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :stock, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :stock, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :stock, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "品出しする商品を対象の場所に品出しすることができる"
+            %td.skill-check__standard
+              = "先入れ先出しを意識して品出しすることができる"
+            %td.skill-check__standard
+              = "品出しのRE基準を理解し、安全かつスピードを持って品出しができる"
+            %td.skill-check__standard
+              = "他箇所展開を意識し、陳列量が少ない場合は他箇所展開場所にも品出しをすることができる"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<前出し>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :front, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :front, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :front, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :front, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :front, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :front, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :front, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :front, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :front, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :front, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :front, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :front, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "商品の前出しをすることができる"
+            %td.skill-check__standard
+              = "手前側だけでなく、棚の奥から全体的に前出しができる"
+            %td.skill-check__standard
+              = "商品のフェースアップを意識して前出しができる"
+            %td.skill-check__standard
+              = "品出しの際に棚全体の商品の前出しを意識して実行している"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<接客>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :service, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :service, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :service, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :service, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :service, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :service, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :service, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :service, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :service, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :service, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :service, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :service, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "お客さまの問い合わせに接客用語を用いて接客している"
+            %td.skill-check__standard
+              = "商品の場所を尋ねられた場合、その場所まで案内できる"
+            %td.skill-check__standard
+              = "お客さまに商品の特徴を説明できる"
+            %td.skill-check__standard
+              = "お求めの商品が欠品だった場合、お客さまに代替案を提示できる"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<発注>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :order, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :order, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :order, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :order, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :order, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :order, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :order, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :order, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :order, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :order, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :order, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :order, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "グロサリー（非冷蔵商品）の発注ができる"
+            %td.skill-check__standard
+              = "日配（冷蔵商品）の発注ができる"
+            %td.skill-check__standard
+              = "在庫を把握し、ポイントデーや天候の与件を考慮して発注ができる"
+            %td.skill-check__standard
+              = "発注のRE基準を理解し、発注時間の短縮に努めている"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<値引き・廃棄>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :loss, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :loss, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :loss, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :loss, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :loss, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :loss, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :loss, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :loss, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :loss, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :loss, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :loss, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :loss, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "商品の値引き・廃棄をすることができる（機器を扱うことができる）"
+            %td.skill-check__standard
+              = "商品別の値引き・廃棄基準を理解し、対象商品を下げることができる"
+            %td.skill-check__standard
+              = "値引き・廃棄のRE基準を理解し、時間短縮に努めている"
+            %td.skill-check__standard
+              = "自店のロス率、ロス金額を理解し、削減に努めている"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<ＰＯＰ作成>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :pop, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :pop, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :pop, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :pop, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :pop, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :pop, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :pop, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :pop, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :pop, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :pop, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :pop, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :pop, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "最低限、①商品名 ②規格 ③価格、が入ったＰＯＰを作成することができる"
+            %td.skill-check__standard
+              = "定番やセールなど、その時の企画によってＰＯＰを変更することができる"
+            %td.skill-check__standard
+              = "ＰＯＰ作成のRE基準を理解し、作成時間の短縮に努めている"
+            %td.skill-check__standard
+              = "ＰＯＰに商品の特徴やキャッチフレーズなどを入れ、販売促進に努めている"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<クリンリネス>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :clean, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :clean, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :clean, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :clean, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :clean, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :clean, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :clean, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :clean, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :clean, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :clean, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :clean, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :clean, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "ダスターを常備し、いつでもクリンリネスが出来るよう心がけている"
+            %td.skill-check__standard
+              = "クリンリネス用具の使い方を理解し、クリンリネスが出来る"
+            %td.skill-check__standard
+              = "品出しや前出しの際に、棚やケースのクリンリネスを心がけている"
+            %td.skill-check__standard
+              = "クリンリネスの必要箇所を理解し、適切なタイミングでクリンリネスを実施している"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<数値分析>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :analysis, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :analysis, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :analysis, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :analysis, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :analysis, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :analysis, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :analysis, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :analysis, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :analysis, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :analysis, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :analysis, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :analysis, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "日報を出勤時確認できている"
+            %td.skill-check__standard
+              = "ＰＣで売上などの数値を調べることができる"
+            %td.skill-check__standard
+              = "売上だけでなく、差益、客数、ロスなどの推移も把握しようと意識している"
+            %td.skill-check__standard
+              = "数値をもとに課題を見つけ出し、改善に取り組んでいる"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<情報収集>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :info, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :info, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :info, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :info, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :info, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :info, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :info, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :info, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :info, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :info, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :info, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :info, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "メディアの情報に意識を傾けている"
+            %td.skill-check__standard
+              = "自ら得た情報をスタッフや店舗メンバーに共有している"
+            %td.skill-check__standard
+              = "競合店のチラシを確認したり直接足を運んで調査・比較している"
+            %td.skill-check__standard
+              = "情報収集を活かし、自分なりのアイデアを活かしている"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill-check__field--name 
+          = "<試食販売>"
+        %table.skill-check__table{border: 2}
+          %tr
+            %td.skill-check__label
+              = f.label :sale, 0, class: "form_label"
+            %td.skill-check__label
+              = f.label :sale, 1, class: "form_label"
+            %td.skill-check__label
+              = f.label :sale, 2, class: "form_label"
+            %td.skill-check__label
+              = f.label :sale, 3, class: "form_label"
+            %td.skill-check__label
+              = f.label :sale, 4, class: "form_label"
+            %td.skill-check__label
+              = f.label :sale, 5, class: "form_label"
+          %tr
+            %td.skill-check__radio-btn
+              = f.radio_button :sale, 0, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :sale, 1, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :sale, 2, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :sale, 3, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :sale, 4, class: "form_radio_btn"
+            %td.skill-check__radio-btn
+              = f.radio_button :sale, 5, class: "form_radio_btn"
+          %tr
+            %td.skill-check__standard
+              = "まだ教わっていない"
+            %td.skill-check__standard
+              = "店頭に出て試食販売ができる"
+            %td.skill-check__standard
+              = "しっかり声を出して試食販売をアピールしている"
+            %td.skill-check__standard
+              = "試食販売商品のオススメポイントをお客さまに説明できる"
+            %td.skill-check__standard
+              = "お客さまに買ってもらうにはどうしたらいいか、自分なりに工夫し実践している"
+            %td.skill-check__standard
+              = "そのスキルを他スタッフに教えることができる"
+        .skill_submit
+          = f.submit "送信する", class: "skill_submit__btn"
