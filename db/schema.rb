@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_05_12_081812) do
 
   create_table "skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
+    t.date "date"
     t.integer "stock"
     t.integer "front"
     t.integer "service"
@@ -51,7 +52,6 @@ ActiveRecord::Schema.define(version: 2020_05_12_081812) do
     t.integer "info"
     t.integer "sale"
     t.datetime "created_at", null: false
-    t.date "date"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
