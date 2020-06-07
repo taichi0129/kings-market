@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-    registrations: 'users/registrations'
-  }
+  devise_for :users
   # devise_for :admins
   root to: "users#index"
   namespace :skills do
