@@ -3,7 +3,7 @@
     .skill-check__title
       現状のスキルチェックを行います
     .skill-check__field
-      = form_for @skill do |f|
+      = form_with model: @skill, local: true do |f|
         .skill-check__field--date
           = f.label :date, "スキルチェック日"
           = f.date_field :date
