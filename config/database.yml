@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: kings_market_production
-  username: kings_market
-  password: <%= ENV['KINGS_MARKET_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['DATABASE_USERNAAME'] %>
+  username: <%= ENV['DATABASE_PASSWORD'] %>
+  password: <%= ENV['RAILS_MASTER_KEY'] %>
