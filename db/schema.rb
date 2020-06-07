@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_12_081812) do
+ActiveRecord::Schema.define(version: 2020_06_07_145731) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -38,24 +38,35 @@ ActiveRecord::Schema.define(version: 2020_05_12_081812) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "scores", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "skill_id"
+    t.integer "score", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["skill_id"], name: "index_scores_on_skill_id"
+    t.index ["user_id"], name: "index_scores_on_user_id"
+  end
+
   create_table "skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "skill", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "user_id"
     t.date "date"
-    t.integer "stock"
-    t.integer "front"
-    t.integer "service"
-    t.integer "order"
-    t.integer "loss"
-    t.integer "pop"
-    t.integer "clean"
-    t.integer "analysis"
-    t.integer "info"
-    t.integer "sale"
-    t.datetime "created_at", null: false
+    t.integer "stock", null: false
+    t.integer "front", null: false
+    t.integer "service", null: false
+    t.integer "order", null: false
+    t.integer "loss", null: false
+    t.integer "pop", null: false
+    t.integer "clean", null: false
+    t.integer "analysis", null: false
+    t.integer "info", null: false
+    t.integer "sale", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -63,9 +74,12 @@ ActiveRecord::Schema.define(version: 2020_05_12_081812) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "scores", "skills"
+  add_foreign_key "scores", "users"
 end
