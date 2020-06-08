@@ -1,9 +1,11 @@
 $(function() {
   function buildHTML(comment){
+    var content = comment.text ? `${comment.text}` : "";
+    var text = content.replace(/\n|\r\n|\r/g, '<br>');
     var html = `
       <div class="side-data__comment__box">
         <div class="side-data__comment__box--main">
-          ${comment.text}
+          ${text}
         </div>
         <div class="side-data__comment__box__info">
           <div class="side-data__comment__info--name">

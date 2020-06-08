@@ -12,7 +12,6 @@
       .side-data__graph--sum
         = "計 #{@skill.sum_skill} 点"
       %canvas#myChart{style: "width: 100%; height: 100%;"}
-      -# %script{src: "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"}
       :javascript
         draw_graph();
     .side-data__comment
@@ -20,7 +19,7 @@
         - @comments.each do |comment|
           .side-data__comment__box
             .side-data__comment__box--main
-              = comment.text
+              = simple_format(comment.text)
             .side-data__comment__box__info
               .side-data__comment__info--name
                 = comment.user.name
