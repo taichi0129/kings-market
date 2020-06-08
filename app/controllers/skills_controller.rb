@@ -5,8 +5,8 @@ class SkillsController < ApplicationController
     @skill = Skill.new
   end
   def create
-    skill = Skill.create(skill_params)
-    if skill.save
+    @skill = Skill.new(skill_params)
+    if @skill.save
       redirect_to root_path, notice: '登録が完了しました'
     else
       redirect_to new_skill_path, alert: '登録出来ませんでした。再度登録してください。'
