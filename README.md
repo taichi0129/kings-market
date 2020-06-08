@@ -1,7 +1,7 @@
 # アプリの概要
 - スタッフの能力の推移やスキルが確認・フィードバックできる管理アプリケーションとなります。
 
-![スクリーンショット 2020-06-08 18.35.44.png](https://github.com/taichi0129/kings-market/blob/master/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-06-08%2018.35.44.png)
+![readme-photo1](https://github.com/taichi0129/kings-market/blob/master/app/assets/images/readme-photo1.png)
 ### 出来ること
 - 現状のスキルチェックを簡易につけることが出来る
 - スキルチェックをグラフで確認することで、自分の強み、弱みがすぐ確認出来る
@@ -37,7 +37,7 @@
 
 
 # ER図
-
+![kings-market_er](https://github.com/taichi0129/kings-market/blob/master/app/assets/images/kings-market_er.png)
 
 
 
