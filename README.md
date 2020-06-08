@@ -42,12 +42,10 @@
 
 
 # 使用した言語
-
-
-
-
+HTML, CSS, Ruby on Rails, JavaScript, jQuery, MYSQL, HEROKU 
 # 今後実装したい機能
-
+- スタッフ別のスキルチェック一覧表表示
+- スタッフ別の最新スキルチェックグラフ一覧表示
 
 
 
