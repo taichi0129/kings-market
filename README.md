@@ -44,6 +44,9 @@ HTML, CSS, Ruby on Rails, JavaScript, jQuery, MYSQL, HEROKU
 - スタッフ別のスキルチェック一覧表表示
 - スタッフ別の最新スキルチェックグラフ一覧表示
 
+# Application
+https://kings-market.herokuapp.com/
+
 # Author
 西村　太一
 nishi.made.t.9210@gmail.com
