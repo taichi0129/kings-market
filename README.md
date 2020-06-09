@@ -48,7 +48,7 @@ HTML, CSS, Ruby on Rails, JavaScript, jQuery, MYSQL, HEROKU
 https://kings-market.herokuapp.com/
 
 # Author
-西村　太一
+西村　太一  
 nishi.made.t.9210@gmail.com
 
 
