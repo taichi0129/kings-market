@@ -1,7 +1,7 @@
 # アプリの概要
 - スタッフの能力の推移やスキルが確認・フィードバックできる管理アプリケーションとなります。
+<img width="1680" alt="スクリーンショット 2020-06-09 14 49 11" src="https://user-images.githubusercontent.com/63991679/84110762-6ff30000-aa60-11ea-941c-05359f982334.png">
 
-![readme-photo1](https://github.com/taichi0129/kings-market/blob/master/app/assets/images/readme-photo1.png)
 ### 出来ること
 - 現状のスキルチェックを簡易につけることが出来る
 - スキルチェックをグラフで確認することで、自分の強み、弱みがすぐ確認出来る
@@ -13,9 +13,7 @@
 # 作成した背景
 - 前職の経験を活かし、マネジメントをする上でスタッフのスキルを素早くチェック、  
 把握できる管理アプリを作りたかった。
-
-
-
+![skillcheck](https://user-images.githubusercontent.com/63991679/84111084-1e974080-aa61-11ea-8842-c2673b7fedc4.gif)
 
 
 # 実装した機能
@@ -37,8 +35,7 @@
 
 
 # ER図
-![kings-market_er](https://github.com/taichi0129/kings-market/blob/master/app/assets/images/kings-market_er.png)
-
+<img width="791" alt="スクリーンショット 2020-06-09 14 50 00" src="https://user-images.githubusercontent.com/63991679/84110838-97e26380-aa60-11ea-9c0d-2d4c72773ac5.png">
 
 
 # 使用した言語
