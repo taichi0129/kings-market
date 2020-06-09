@@ -1,4 +1,4 @@
-# アプリの概要
+# SkillCheckSheet
 - スタッフの能力の推移やスキルが確認・フィードバックできる管理アプリケーションとなります。
 <img width="1680" alt="スクリーンショット 2020-06-09 14 49 11" src="https://user-images.githubusercontent.com/63991679/84110762-6ff30000-aa60-11ea-941c-05359f982334.png">
 
@@ -16,7 +16,7 @@
 ![skillcheck](https://user-images.githubusercontent.com/63991679/84111084-1e974080-aa61-11ea-8842-c2673b7fedc4.gif)
 
 
-# 実装した機能
+# 
 1. chart.jsでのグラフ実装
 
 
@@ -34,7 +34,7 @@
 
 
 
-# ER図
+# DATABASE
 <img width="791" alt="スクリーンショット 2020-06-09 14 50 00" src="https://user-images.githubusercontent.com/63991679/84110838-97e26380-aa60-11ea-9c0d-2d4c72773ac5.png">
 
 
@@ -43,6 +43,10 @@ HTML, CSS, Ruby on Rails, JavaScript, jQuery, MYSQL, HEROKU
 # 今後実装したい機能
 - スタッフ別のスキルチェック一覧表表示
 - スタッフ別の最新スキルチェックグラフ一覧表示
+
+# Author
+西村　太一
+nishi.made.t.9210@gmail.com
 
 
 
