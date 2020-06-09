@@ -67,3 +67,5 @@ gem 'chart-js-rails', '~> 0.1.4'
 gem 'gon', '~> 6.2.0'
 gem 'jquery-rails'
 gem 'rails_12factor', group: :production
+gem 'rspec-rails'
+gem 'factory_bot_rails'
