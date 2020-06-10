@@ -3,6 +3,6 @@ class Skills::SearchesController < ApplicationController
     @skill = Skill.find_by(date: params[:date])
     gon.skill = @skill
     @comment = Comment.new
-    @comments = @skill.comments.includes(:user)
+    @comments = @skill.comments.all
   end
 end
