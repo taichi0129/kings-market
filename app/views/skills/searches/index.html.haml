@@ -4,11 +4,9 @@
       .side-data__info--date
         = @skill.set_date
       - if current_user.admin?
-         .side-data__info__edit
-          = form_with(url: skills_searches_path, method: :get, local: true) do |f|
-            = f.collection_select :date, Skill.all.order("id DESC"), {:date, :user_id.name}, 'set_date', {prompt: "他のデータを見る"}, {class: "side-data__info__edit--date"}
-            = f.submit "変更"
-            = link_to "トップに戻る", root_path, class: "side-data__info__edit--top"
+        .side-data__info__edit
+          = link_to "一覧表に戻る", user_path(current_user), class: "side-data__info__edit--top"
+          = link_to "トップに戻る", root_path, class: "side-data__info__edit--top"
       - else
         .side-data__info__edit
           = form_with(url: skills_searches_path, method: :get, local: true) do |f|
