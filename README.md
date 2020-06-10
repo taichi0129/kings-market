@@ -49,6 +49,9 @@ HTML・CSS・JavaScript・jQuery・MYSQL
 
 # Application
 https://kings-market.herokuapp.com/
+### テストユーザー
+メールアドレス：admin@admin
+パスワード：
 
 # Author
 西村　太一  
