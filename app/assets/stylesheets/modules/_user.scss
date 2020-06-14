@@ -1,6 +1,5 @@
 .side-menu {
-  width: 40%;
-  // background-color: #FFFAFA;
+  min-width: 560px;
   font-size: 30px;
   display: flex;
   flex-direction: column;
@@ -34,25 +33,6 @@
     font-size: 30px;
     border-radius: 15px;
   }
-  // &__check {
-  //   text-decoration: none;
-  //   border: 2px solid;
-  //   border-radius: 15px;
-  //   padding: 15px;
-  //   background-color: #DDFFFF;
-  // }
-  // &__standard {
-  //   text-decoration: none;
-  //   border: 2px solid;
-  //   border-radius: 15px;
-  //   padding: 15px;
-  //   background-color: #DDFFFF;
-  // }
-}
-
-.side-menu-image {
-  
-  
 }
 
 .latest-data {

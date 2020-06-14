@@ -1,6 +1,6 @@
 .devise {
   margin: 30px auto;
-  width: 30%;
+  min-width: 420px;
   padding-top: 20px;
   padding: 20px 40px;
   border: 1px solid;
@@ -28,7 +28,6 @@
 }
 
 .devise-btn {
-  // display: block;
   height: 50px;
   width: 100%;
   margin-top: 20px;
